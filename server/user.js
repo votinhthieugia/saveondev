@@ -1,5 +1,5 @@
 var User = {};
-var pgPool = require('pgPool');
+var pgPool = require('./pgPool');
 
 User.find = function(username, password, callback) {
 	pgPool.connect(function(err, client, done) {
