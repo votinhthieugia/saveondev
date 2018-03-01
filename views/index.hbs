@@ -1,0 +1,16 @@
+<a href='/logout'>Logout</a>
+<div ng-controller="mainController">
+	Number of posts: \{{ data.posts.length }}
+	<ul ng-repeat="post in data.posts">
+		<li>Title: \{{ post.title }}, Content: \{{ post.content }}</li>
+	</ul>
+</div>
+<form action="/postsInPdf" method="post">
+	<script class="stripe-button" src="//checkout.stripe.com/v2/checkout.js" 
+			data-key="pk_test_OtUuMDA6UvEgCbHw7qWUgpBd" 
+			data-locale="auto" 
+			data-description="Sample Charge" 
+			data-label="Download PDF for 5$"
+			data-amount="500">
+	</script>
+</form>
